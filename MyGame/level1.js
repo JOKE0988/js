@@ -22,6 +22,11 @@ class level1 extends Phaser.Scene {
   frameHeight: 64,
   });
 
+  this.load.image("cu", "assets/cu.png", {
+    // frameWidth: 260,
+    // frameHeight: 280,
+    });
+
 } // end of preload //
 
   create (){
@@ -86,9 +91,29 @@ this.anims.create({
   repeat: -1,
 });
 
+//ojl
 var start = map.findObject("s",obj => obj.name === "s");
 this.player = this.physics.add.sprite(start.x, start.y, "gen1");
 window.player = this.player;
+
+// shirt object
+let f = map.findObject("s", (obj) => obj.name === "f");
+let f1 = map.findObject("s", (obj) => obj.name === "f1");
+let f2 = map.findObject("s", (obj) => obj.name === "f2");
+let f3 = map.findObject("s", (obj) => obj.name === "f3");
+let f4 = map.findObject("s", (obj) => obj.name === "f4");
+let f5 = map.findObject("s", (obj) => obj.name === "f5");
+// let shirt2 = map.findObject("Object Layer 1", (obj) => obj.name === "shirt2");
+// let shirt3 = map.findObject("Object Layer 1", (obj) => obj.name === "shirt3");
+
+this.enemy1 = this.physics.add.sprite(f.x, f.y, "cu").setScale(1)
+this.enemy2 = this.physics.add.sprite(f1.x, f1.y, "cu").setScale(1)
+this.enemy3 = this.physics.add.sprite(f2.x, f2.y, "cu").setScale(1)
+this.enemy4 = this.physics.add.sprite(f3.x, f3.y, "cu").setScale(1)
+this.enemy5 = this.physics.add.sprite(f4.x, f4.y, "cu").setScale(1)
+this.enemy6 = this.physics.add.sprite(f5.x, f5.y, "cu").setScale(1)
+// this.enemy2 = this.physics.add.sprite(shirt2.x, shirt2.y, "shirt").play("shirtMove").setScale(0.7)
+// this.enemy3 = this.physics.add.sprite(shirt3.x, shirt3.y, "shirt").play("shirtMove").setScale(0.7)
 
 // create the arrow keys
 this.cursors = this.input.keyboard.createCursorKeys();

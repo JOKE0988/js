@@ -1,17 +1,17 @@
-class story extends Phaser.Scene {
+class c extends Phaser.Scene {
 
   constructor ()
   {
-      super({ key: "story" });
+      super({ key: "c" });
   }
 
   preload() {
-    this.load.image('story', 'assets/st.png')
+    this.load.image('c', 'assets/c.png')
 
 }
 
 create () {
-    this.story = this.add.image(0, 0, 'story').setOrigin(0, 0).setScale(1);
+    this.c = this.add.image(0, 0, 'c').setOrigin(0, 0).setScale(1);
    
     console.log("menu page - welcome");
   //   let map = this.make.tilemap({ key: "world" });
@@ -20,7 +20,7 @@ create () {
     
     spaceDown.on('down', function(){
     console.log("Spacebar pressed, go to next menu");
-    this.scene.start("plays");
+    this.scene.start("level1");
     }, this );
 
 }

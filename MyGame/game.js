@@ -1,8 +1,8 @@
 var config = {
     type: Phaser.AUTO,
     ////// pixel size * tile map size 
-    width: 32 * 20,
-    height: 32 * 20,
+    width: 400,
+    height: 400,
     /////////////////////////////////////////
     physics: {
         default: 'arcade',
@@ -10,14 +10,14 @@ var config = {
             debug: true
         }
     },
-    // scale: {
-    //     mode: Phaser.Scale.FIT,
-    //     autoCenter: Phaser.Scale.CENTER_BOTH
-    // },
-    backgroundColor: '#000000',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    backgroundColor: '#515A5A',
     pixelArt: true,
     //// Add all scenes below in the array
-    scene: [preloadScene, story, level1, level2, level3]
+    scene: [main, story, plays, c, level1, level2, level3]
 };
 
 var game = new Phaser.Game(config);
