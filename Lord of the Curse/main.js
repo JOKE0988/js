@@ -18,6 +18,12 @@ class main extends Phaser.Scene {
 
       this.add.text(85,310, '-press SpaceBar to continue-', 
             { font: '15px Courier', fill: '#FFFFFF' });
+
+            this.add.text(155,330, '-Wong Kah How-', 
+            { font: '12px Courier', fill: '#FFFFFF' });
+
+            this.add.text(15,360, '-MA1 JAN 2024-', 
+            { font: '12px Courier', fill: '#FFFFFF' });
      
       console.log("menu page - welcome");
 
