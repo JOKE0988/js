@@ -1,8 +1,8 @@
 class level1 extends Phaser.Scene {
 
-  constructor ()
-  {
+  constructor (){
       super({key: 'level1' });
+      this.cuCount = 0;
   }
 
   preload () {
@@ -21,6 +21,11 @@ class level1 extends Phaser.Scene {
   frameWidth: 64,
   frameHeight: 64,
   });
+
+  this.load.spritesheet("diren","assets/ye.png", {
+    frameWidth: 64,
+    frameHeight: 64,
+    });
 
   this.load.image("cu", "assets/cu.png", {
     // frameWidth: 260,
@@ -96,7 +101,7 @@ var start = map.findObject("s",obj => obj.name === "s");
 this.player = this.physics.add.sprite(start.x, start.y, "gen1");
 window.player = this.player;
 
-// shirt object
+// cu object
 let f = map.findObject("s", (obj) => obj.name === "f");
 let f1 = map.findObject("s", (obj) => obj.name === "f1");
 let f2 = map.findObject("s", (obj) => obj.name === "f2");
@@ -106,14 +111,16 @@ let f5 = map.findObject("s", (obj) => obj.name === "f5");
 // let shirt2 = map.findObject("Object Layer 1", (obj) => obj.name === "shirt2");
 // let shirt3 = map.findObject("Object Layer 1", (obj) => obj.name === "shirt3");
 
-this.enemy1 = this.physics.add.sprite(f.x, f.y, "cu").setScale(1)
-this.enemy2 = this.physics.add.sprite(f1.x, f1.y, "cu").setScale(1)
-this.enemy3 = this.physics.add.sprite(f2.x, f2.y, "cu").setScale(1)
-this.enemy4 = this.physics.add.sprite(f3.x, f3.y, "cu").setScale(1)
-this.enemy5 = this.physics.add.sprite(f4.x, f4.y, "cu").setScale(1)
-this.enemy6 = this.physics.add.sprite(f5.x, f5.y, "cu").setScale(1)
+this.f = this.physics.add.sprite(f.x, f.y, "cu").setScale(1)
+this.f1 = this.physics.add.sprite(f1.x, f1.y, "cu").setScale(1)
+this.f2 = this.physics.add.sprite(f2.x, f2.y, "cu").setScale(1)
+this.f3 = this.physics.add.sprite(f3.x, f3.y, "cu").setScale(1)
+this.f4 = this.physics.add.sprite(f4.x, f4.y, "cu").setScale(1)
+this.f5 = this.physics.add.sprite(f5.x, f5.y, "cu").setScale(1)
 // this.enemy2 = this.physics.add.sprite(shirt2.x, shirt2.y, "shirt").play("shirtMove").setScale(0.7)
 // this.enemy3 = this.physics.add.sprite(shirt3.x, shirt3.y, "shirt").play("shirtMove").setScale(0.7)
+// in create, add tweens  
+
 
 // create the arrow keys
 this.cursors = this.input.keyboard.createCursorKeys();
@@ -152,6 +159,14 @@ var level2Down = this.input.keyboard.addKey(50);
 // make the camera follow the player
 this.cameras.main.startFollow(this.player);
 
+//Collectables (cucambe)
+this.physics.add.overlap(this.player, this.f, this.collectcu, null, this);
+this.physics.add.overlap(this.player, this.f1, this.collectcu, null, this);
+this.physics.add.overlap(this.player, this.f2, this.collectcu, null, this);
+this.physics.add.overlap(this.player, this.f3, this.collectcu, null, this);
+this.physics.add.overlap(this.player, this.f4, this.collectcu, null, this);
+this.physics.add.overlap(this.player, this.f5, this.collectcu, null, this);
+
 
 } // end of create //
 
@@ -189,10 +204,26 @@ if (
   console.log("Door1");
   this.level2();
 }
+
+// Check for the pantsCount
+if (this.cuCount > 5 ) {
+  console.log('Collected 6 cu, jump to warning');
+  this.scene.start("warning");
+}
+
 } // end of update //
 
 level2(player, tile) {
-  console.log("level2");
-  this.scene.start("level2",);
+  console.log("warning");
+  this.scene.start("warning",);
 }
+// Collect cu
+collectcu(player, item) {
+  console.log("collectcu");
+  this.cuCount++
+  // this.cameras.main.shake(200);
+  item.disableBody(true, true); // remove cu
+  return false;
+}
+
 }

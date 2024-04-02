@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="29" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="29" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="16">
+ <editorsettings>
+  <export target="level3.tmj" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" name="miscatlas" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
   <image source="misc_atlas.png" width="1024" height="1024"/>
  </tileset>
@@ -152,6 +155,48 @@
  </layer>
  <objectgroup id="5" name="s">
   <object id="1" name="s" x="630" y="248">
+   <point/>
+  </object>
+  <object id="2" name="f" x="788.576" y="685.87">
+   <point/>
+  </object>
+  <object id="3" name="f1" x="463.049" y="677.166">
+   <point/>
+  </object>
+  <object id="4" name="f2" x="628.424" y="661.499">
+   <point/>
+  </object>
+  <object id="5" name="f3" x="962.655" y="212.376">
+   <point/>
+  </object>
+  <object id="6" name="f4" x="327.268" y="189.746">
+   <point/>
+  </object>
+  <object id="7" name="f5" x="1220.29" y="865.171">
+   <point/>
+  </object>
+  <object id="8" name="k1" x="40.0381" y="379.491">
+   <point/>
+  </object>
+  <object id="9" name="k2" x="1242.92" y="452.604">
+   <point/>
+  </object>
+  <object id="10" name="k3" x="62.6683" y="861.689">
+   <point/>
+  </object>
+  <object id="11" name="k4" x="50.4828" y="555.311">
+   <point/>
+  </object>
+  <object id="12" name="k5" x="461.308" y="546.607">
+   <point/>
+  </object>
+  <object id="13" name="k6" x="788.576" y="539.644">
+   <point/>
+  </object>
+  <object id="14" name="k7" x="1222.03" y="684.129">
+   <point/>
+  </object>
+  <object id="15" name="k8" x="53.9644" y="188.005">
    <point/>
   </object>
  </objectgroup>

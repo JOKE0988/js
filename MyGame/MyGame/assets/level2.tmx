@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="13">
  <editorsettings>
   <export target="level2.tmj" format="json"/>
  </editorsettings>
@@ -159,6 +159,36 @@
  </layer>
  <objectgroup id="6" name="s">
   <object id="1" name="s" x="100" y="942">
+   <point/>
+  </object>
+  <object id="2" name="f" x="222.821" y="132.3">
+   <point/>
+  </object>
+  <object id="3" name="f1" x="475.235" y="574.459">
+   <point/>
+  </object>
+  <object id="4" name="f2" x="1011.4" y="130.559">
+   <point/>
+  </object>
+  <object id="5" name="f3" x="1121.07" y="718.945">
+   <point/>
+  </object>
+  <object id="6" name="f4" x="645.832" y="866.911">
+   <point/>
+  </object>
+  <object id="7" name="f5" x="832.096" y="445.641">
+   <point/>
+  </object>
+  <object id="9" name="k1" x="1195.92" y="172.338">
+   <point/>
+  </object>
+  <object id="10" name="k2" x="339.453" y="882.579">
+   <point/>
+  </object>
+  <object id="11" name="k3" x="342.935" y="443.9">
+   <point/>
+  </object>
+  <object id="12" name="k4" x="78.3354" y="172.338">
    <point/>
   </object>
  </objectgroup>
